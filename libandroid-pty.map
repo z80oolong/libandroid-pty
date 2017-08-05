@@ -1,0 +1,1 @@
+{ global: getpt; grantpt; posix_openpt; unlockpt; ttyname; ttyname_r; ptsname; ptsname_r; openpty; forkpty; login_tty; local: *; };
