@@ -9,7 +9,7 @@ Open Source Project, and fixed by [Z.OOL. (NAKATSUKA, Yukitaka)][2].
 - [https://raw.githubusercontent.com/android/platform_bionic/30a36273ab761fb07892f7816b4873b6c48a0cea/libc/bionic/pty.cpp][3]
 - [https://raw.githubusercontent.com/android/platform_bionic/30a36273ab761fb07892f7816b4873b6c48a0cea/libc/private/ThreadLocalBuffer.h][4]
 
-libandroid-pty.so is distributed under the same license of "[bionic][1]" library.
+"libandroid-pty.so" is distributed under the same license of "[bionic][1]" library.
 
 [1]:https://github.com/android/platform_bionic/
 [2]:http://zool.jpn.org/
