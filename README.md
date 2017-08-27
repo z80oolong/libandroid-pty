@@ -12,10 +12,6 @@ Debian noroot 等のような Android OS 上で chroot を用いて構築され�
 - [https://raw.githubusercontent.com/android/platform_bionic/30a36273ab761fb07892f7816b4873b6c48a0cea/libc/bionic/pty.cpp][2]
 - [https://raw.githubusercontent.com/android/platform_bionic/30a36273ab761fb07892f7816b4873b6c48a0cea/libc/private/ThreadLocalBuffer.h][3]
 
-[1]:https://github.com/android/platform_bionic/
-[2]:https://raw.githubusercontent.com/android/platform_bionic/master/libc/bionic/pty.cpp
-[3]:https://raw.githubusercontent.com/android/platform_bionic/master/libc/private/ThreadLocalBuffer.h
-
 ## インストール及び使用方法
 
 ソースコードのビルド及び ```libandroid-pty.so``` のインストールには、 ```make``` コマンドを使用します。ソースコード ```libandroid-pty.c``` の存在するディレクトリにおいて、 ```make``` コマンドを以下のように実行します。
@@ -37,7 +33,12 @@ Debian noroot 等のような Android OS 上で chroot を用いて構築され�
 
 ```libandroid-pty.so``` を構成するソースコードは、 [Android Open Source Project][4] 及び [Z.OOL. (mailto:zool@zool.jpn.org)][5] が著作権を有し、Android Open Source Project による bionic のライセンスと同一の配布条件に従って配布されるものとします。
 
-なお、 ```bionic``` 及び ```libandroid-pty.so``` の配布条件の詳細については、ドキュメント [LICENSE.md](./LICENSE.md) を御覧下さい。
+なお、 ```bionic``` 及び ```libandroid-pty.so``` の配布条件の詳細については、ドキュメント ```LICENSE.md``` を御覧下さい。
 
+<!-- URL Reference -->
+
+[1]:https://github.com/android/platform_bionic/
+[2]:https://raw.githubusercontent.com/android/platform_bionic/30a36273ab761fb07892f7816b4873b6c48a0cea/libc/bionic/pty.cpp
+[3]:https://raw.githubusercontent.com/android/platform_bionic/30a36273ab761fb07892f7816b4873b6c48a0cea/libc/private/ThreadLocalBuffer.h
 [4]:https://source.android.com/
 [5]:http://zool.jpn.org/
