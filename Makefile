@@ -39,6 +39,11 @@
 # install directory.
 INSTALL_DIR = /usr/local/lib
 
+# source file, object file, and map file.
+LIBANDROID_PTY_C   = libandroid-pty.c
+LIBANDROID_PTY_SO  = libandroid-pty.so
+LIBANDROID_PTY_MAP = libandroid-pty.map
+
 # shell commands.
 MKDIR   = mkdir
 INSTALL = install
@@ -48,7 +53,7 @@ RM      = rm
 # compile commands and flags.
 GCC     = gcc
 STRIP   = strip
-CFLAGS  += -fPIC -shared -Wall -Os -Wl,--version-script,libandroid-pty.map
+CFLAGS  += -fPIC -shared -Wall -Os -Wl,--version-script,$(LIBANDROID_PTY_MAP)
 LDFLAGS += -lpthread
 
 # compile architecture.
@@ -67,12 +72,6 @@ ifeq ($(ARCH), x86-64)
   GCC    := x86_64-linux-gnu-$(GCC)
   STRIP  := x86_64-linux-gnu-$(STRIP)
 endif
-
-# source file, object file, and etc.
-LIBANDROID_PTY_C   = libandroid-pty.c
-LIBANDROID_PTY_SO  = libandroid-pty.so
-LIBANDROID_PTY_MAP = libandroid-pty.map
-
 
 # build task.
 $(LIBANDROID_PTY_SO): $(LIBANDROID_PTY_C) $(LIBANDROID_PTY_MAP)
