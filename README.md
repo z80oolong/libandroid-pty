@@ -8,7 +8,6 @@ Debian noroot 等のような Android OS 上で chroot を用いて構築され�
 
 ```libandroid-pty.so``` は、 Android OS の C 標準ライブラリである bionic のうち、擬似端末に関係する以下の C++ 言語のソースコードを修正し、完全な C 言語のコードに記述し直したものです。
 
-
 - [https://raw.githubusercontent.com/android/platform_bionic/30a36273ab761fb07892f7816b4873b6c48a0cea/libc/bionic/pty.cpp][2]
 - [https://raw.githubusercontent.com/android/platform_bionic/30a36273ab761fb07892f7816b4873b6c48a0cea/libc/private/ThreadLocalBuffer.h][3]
 
@@ -18,7 +17,7 @@ Debian noroot 等のような Android OS 上で chroot を用いて構築され�
 
 ```
  $ make
- $ make install PREFIX="/path/to/lib"  ; # ここで、 /path/to/lib は、 libandroid-pty.so のインストール先のディレクトリ。
+ $ make install INSTALL_DIR="/path/to/lib"  ; # ここで、 /path/to/lib は、 libandroid-pty.so のインストール先のディレクトリ。
 ```
 
 そして次のように、環境変数 LD_PRELOAD に libandroid-pty.so のインストール先のフルパスを設定して、擬似端末を操作するコマンドを起動すると、擬似端末に関する問題を回避することが出来ます。
@@ -35,7 +34,7 @@ Debian noroot 等のような Android OS 上で chroot を用いて構築され�
 
 なお、 ```bionic``` 及び ```libandroid-pty.so``` の配布条件の詳細については、ドキュメント ```LICENSE.md``` を御覧下さい。
 
-<!-- URL Reference -->
+<!-- 外部リンク一覧 -->
 
 [1]:https://github.com/android/platform_bionic/
 [2]:https://raw.githubusercontent.com/android/platform_bionic/30a36273ab761fb07892f7816b4873b6c48a0cea/libc/bionic/pty.cpp
