@@ -37,7 +37,7 @@
 ## SUCH DAMAGE.
 
 # install directory.
-PREFIX = /usr/local
+INSTALL_PREFIX := /usr/local
 
 # source file, header file, object file, and map file.
 LIBANDROID_PTY_C   = libandroid-pty.c
@@ -58,7 +58,7 @@ CFLAGS  += -fPIC -shared -Wall -Os -Wl,--version-script,$(LIBANDROID_PTY_MAP)
 LDFLAGS += -lpthread
 
 # compile architecture.
-ARCH    = arm
+ARCH    := arm
 
 ifeq ($(ARCH), arm)
   GCC    := arm-linux-gnueabihf-$(GCC)
@@ -81,10 +81,10 @@ $(LIBANDROID_PTY_SO): $(LIBANDROID_PTY_C) $(LIBANDROID_PTY_H) $(LIBANDROID_PTY_M
 	$(CP) -p $(LIBANDROID_PTY_SO) $(LIBANDROID_PTY_SO).$(ARCH)
 
 install: $(LIBANDROID_PTY_SO) $(LIBANDROID_PTY_H)
-	[ -d $(PREFIX)/lib ] || $(MKDIR) -p $(PREFIX)lib
-	[ -d $(PREFIX)/include ] || $(MKDIR) -p $(PREFIX)/include
-	$(INSTALL) -m 0700 $(LIBANDROID_PTY_SO) $(PREFIX)/lib
-	$(INSTALL) -m 0666 $(LIBANDROID_PTY_H)  $(PREFIX)/include
+	[ -d $(INSTALL_PREFIX)/lib ]     || $(MKDIR) -p $(INSTALL_PREFIX)lib
+	[ -d $(INSTALL_PREFIX)/include ] || $(MKDIR) -p $(INSTALL_PREFIX)/include
+	$(INSTALL) -m 0700 $(LIBANDROID_PTY_SO) $(INSTALL_PREFIX)/lib
+	$(INSTALL) -m 0666 $(LIBANDROID_PTY_H)  $(INSTALL_PREFIX)/include
 
 clean:
 	$(RM) -f $(LIBANDROID_PTY_SO)
