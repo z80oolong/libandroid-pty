@@ -32,7 +32,7 @@ Debian noroot 等のような Android OS 上で chroot を用いて構築され�
 
 ```libandroid-pty.so``` を構成するソースコードは、 [Android Open Source Project][4] 及び [Z.OOL. (mailto:zool@zool.jpn.org)][5] が著作権を有し、Android Open Source Project による bionic のライセンスと同一の配布条件に従って配布されるものとします。
 
-なお、 ```bionic``` 及び ```libandroid-pty.so``` の配布条件の詳細については、ドキュメント ```LICENSE.md``` を御覧下さい。
+なお、 ```bionic``` 及び ```libandroid-pty.so``` の配布条件の詳細については、ドキュメント ```COPYING.md``` を御覧下さい。
 
 <!-- 外部リンク一覧 -->
 
