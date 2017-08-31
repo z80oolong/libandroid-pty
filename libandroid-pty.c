@@ -40,20 +40,7 @@
 
 // Include header file and define struct thread_local_string. 
 
-#define _GNU_SOURCE
-#define _XOPEN_SOURCE 600
-
-#include <malloc.h>
-#include <pthread.h>
-#include <errno.h>
-#include <fcntl.h>
-#include <pty.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <sys/ioctl.h>
-#include <termios.h>
-#include <unistd.h>
-#include <utmp.h>
+#include "libandroid-pty.h"
 
 typedef struct __thread_local_string {
         size_t size;
